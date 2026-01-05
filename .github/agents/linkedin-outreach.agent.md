@@ -28,7 +28,7 @@ Each campaign has its own DB to store the campaign data. DB must be synced in re
 
 ENV VARS: DB_NAME, DB_USER, DB_PASSWORD
 
-## AWD: Agent working directory (must be fetch from .env). All temp files, scripts etc must be deleted when no longer needed 
+## AGENT_WORKING_DIR: Agent working directory (must be fetch from .env). All temp files, scripts etc must be deleted when no longer needed 
 
 ENV VARS: AGENT_WORKING_DIR
 
@@ -50,16 +50,16 @@ ENV VARS: AGENT_WORKING_DIR
 
 IF (USER WANTS A NEW CAMPAIGN):
   2.1 read the .env file, ensure values are not empty 
-  2.2 validate connection to the database, ensure AWD exists
-  2.3 create tasks.md file in the AWD. From this moment you exit the algorithm and work in the plan mode. Before proceeding with the next instructions, generate a comprehensive, verbose task list with checkboxes. New plan items can be added or removed on the fly as you receive more input from the user.
+  2.2 validate connection to the database, ensure ROOT_DIR and AGENT_WORKING_DIR exists
+  2.3 create tasks.md file in the AGENT_WORKING_DIR. From this moment you exit the algorithm and work in the plan mode. Before proceeding with the next instructions, generate a comprehensive, verbose task list with checkboxes. New plan items can be added or removed on the fly as you receive more input from the user.
 
   Here's a higher level overview of the tasks.md
 
   - generate a campaign name if wasn't provided by the user 
 
-  - create a context.md file in the AWD. It represents a campaign overview and user provided context. 
+  - create a context.md file in the AGENT_WORKING_DIR. It represents a campaign overview and user provided context. 
 
-  - craft a proper database schema and save it to file in the AWD
+  - craft a proper database schema and save it to file in the AGENT_WORKING_DIR
 
   - using docker create and provision the campaign database via PostgreSQL
 
