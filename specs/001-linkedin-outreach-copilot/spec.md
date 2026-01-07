@@ -283,7 +283,7 @@ As a user, I want every significant action logged with details before execution,
 
 - **FR-016**: System MUST load the selected campaign's complete state (config, tasks, artifacts, logs) when resuming, enabling continuation without conversation history.
 
-- **FR-017**: System MUST securely store campaign environment secrets (LinkedIn credentials, API keys) using Azure Key Vault integration, with secrets never exposed in chat output, agent prompts, or local storage. System MUST handle Key Vault connectivity requirements and provide clear error messages if internet access is unavailable during credential retrieval.
+- **FR-017**: System MUST securely store campaign environment secrets (LinkedIn credentials, API keys) per Azure Key Vault requirements defined in FR-067, with secrets never exposed in chat output, agent prompts, or local storage.
 
 **Task Management**
 
@@ -363,7 +363,7 @@ As a user, I want every significant action logged with details before execution,
 
 - **FR-049**: System MUST provide a settings page where users can configure LinkedIn credentials, working directory, and other campaign parameters.
 
-- **FR-050**: Settings page MUST store credentials in Azure Key Vault (never in local storage) and never display credentials in plain text after initial entry. System MUST validate Azure Key Vault connectivity before accepting credential input.
+- **FR-050**: Settings page MUST store credentials per Azure Key Vault requirements (FR-067) and never display credentials in plain text after initial entry. System MUST validate Azure Key Vault connectivity before accepting credential input.
 
 - **FR-051**: Settings page MUST provide directory picker for selecting agent working directory, validating that directory exists and is writable.
 
@@ -415,7 +415,7 @@ As a user, I want every significant action logged with details before execution,
 
 **Desktop Application**
 
-- **FR-071**: System MUST be implemented as a .NET MAUI Blazor Hybrid desktop application, running on Windows, macOS, and Linux.
+- **FR-071**: System MUST be implemented as a .NET MAUI 10.0 Blazor Hybrid desktop application, running on Windows, macOS, and Linux.
 
 - **FR-072**: Application MUST start in under 3 seconds on modern hardware (measured from launch to displaying main UI).
 

@@ -128,14 +128,14 @@ All features MUST be decomposed into prioritized, independently deliverable user
 
 ### Required Technologies
 
-- **.NET Version**: .NET 9.0 or later (leveraging latest performance improvements)
-- **Framework**: .NET MAUI with Blazor Hybrid (BlazorWebView)
+- **.NET Version**: .NET 10.0 (LTS - Long-Term Support released November 2025)
+- **Framework**: .NET MAUI 10.0 with Blazor Hybrid (BlazorWebView)
 - **UI Layer**: Blazor components (Razor syntax, C#) - prefer over XAML
 - **Styling**: Modern CSS with CSS isolation, FluentUI Blazor or MudBlazor component library
 - **State Management**: Cascading parameters, dependency injection, local storage for persistence
 - **Data Access**: Entity Framework Core for structured data, SQLite for local storage
 - **HTTP Client**: HttpClient with Polly for resilience and retry policies
-- **Testing**: xUnit or NUnit for unit tests, Playwright or Selenium for UI automation
+- **Testing**: xUnit 2.9+ or NUnit for unit tests, Playwright 1.57+ for UI automation
 
 ### Platform Targets
 
